@@ -1,0 +1,95 @@
+/* Fondo con degradado y marca de agua */
+body {
+  background: linear-gradient(to right, #003366, #00509e);
+  background-size: cover;
+  font-family: "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #fff;
+  position: relative;
+}
+
+/* Marca de agua o logo en el fondo */
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("https://source.unsplash.com/1600x900/?technology,corporate") no-repeat center center;
+  background-size: cover;
+  opacity: 0.15; /* Transparencia para la marca de agua */
+  z-index: -1;
+}
+
+/* Contenedor centrado */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Caja del formulario */
+.form-box {
+  background: rgba(255, 255, 255, 0.1); /* Efecto translúcido */
+  padding: 30px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px); /* Efecto de vidrio */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Título */
+h2 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Campos de entrada */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+  text-align: center;
+}
+
+/* Botón estilizado */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff6600; /* Color corporativo */
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  
+  /* Desglosar la propiedad transition */
+  transition-property: background-color, transform;
+  transition-duration: 0.3s, 0.2s;
+  transition-timing-function: ease, ease;
+}
+
+
+button:hover {
+  background-color: #cc5500;
+  transform: scale(1.05);
+}
+
+/* Mensaje de éxito o error */
+.mensaje {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #28a745;
+}
